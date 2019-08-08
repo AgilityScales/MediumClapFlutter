@@ -3,7 +3,7 @@ library medium_clap_flutter;
 import 'dart:async';
 import 'dart:math';
 
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 /// A Custom Floating Action Button (FAB) library like clapping effect on Medium.
 class ClapFAB extends StatefulWidget {
