@@ -30,6 +30,9 @@ class ClapFAB extends StatefulWidget {
   /// The color of sparkels around the count
   final sparkleColor;
 
+  /// The sparkels image around the count
+  final sparkleImage;
+
   /// The default icon of the ClapFab button
   final defaultIcon;
 
@@ -73,9 +76,10 @@ class ClapFAB extends StatefulWidget {
       this.shadowColor = Colors.blue,
       this.floatingOutlineColor = Colors.white,
       this.floatingBgColor = Colors.white,
+      this.sparkleColor = Colors.blue,
+      this.sparkleImage = "images/sparkles.png",
       this.defaultIcon = Icons.favorite_border,
       this.defaultIconColor = Colors.blue,
-      this.sparkleColor = Colors.blue,
       this.filledIcon = Icons.favorite,
       this.filledIconColor = Colors.blue,
       this.initCounter = 0,
@@ -95,6 +99,7 @@ class ClapFAB extends StatefulWidget {
       this.floatingOutlineColor = Colors.white,
       this.floatingBgColor = Colors.white,
       this.sparkleColor = Colors.blue,
+      this.sparkleImage = "images/sparkles.png",
       this.defaultImage = "images/clap.png",
       this.defaultImageColor = Colors.blue,
       this.filledImageColor = Colors.blue,
@@ -298,7 +303,7 @@ class _ClapFABState extends State<ClapFAB> with TickerProviderStateMixin {
             child: Opacity(
                 opacity: sparklesOpacity,
                 child: Image.asset(
-                  "images/sparkles.png",
+                  widget.sparkleImage,
                   color: widget.sparkleColor,
                   width: 14.0,
                   height: 14.0,
